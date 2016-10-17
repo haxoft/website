@@ -329,8 +329,12 @@ h3.spec {
 #home-slider .slide-content {
 	font-size: 60px;
 	color: #FFFFFF;
-	letter-spacing: -3px;
+	letter-spacing: 3px;
 	text-transform: uppercase;	
+}
+
+#home-slider .content-red {
+	color: #DE5E60;
 }
 
 #home-slider .control-nav {
