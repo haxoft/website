@@ -1397,3 +1397,15 @@ footer .credits {
        -o-transition: none;
           transition: none;
 }
+
+.slide-content > p > img {
+    margin-right: 4px;
+    position: relative;
+    bottom: 7px
+}
+
+.navi-logo > p > img {
+    margin-right: 4px;
+    position: relative;
+    bottom: 7px
+}
