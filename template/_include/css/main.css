@@ -24,7 +24,7 @@ html, html a{
 }
 
 body{
-	background:#2F3238;
+	background:#7F8289;
 	color:#7F8289;
 	font-weight:300;
 	font-size:16px;
@@ -1398,14 +1398,10 @@ footer .credits {
           transition: none;
 }
 
+/* logo improving in the slider */
 .slide-content > p > img {
     margin-right: 4px;
     position: relative;
     bottom: 7px
 }
 
-.navi-logo > p > img {
-    margin-right: 4px;
-    position: relative;
-    bottom: 7px
-}
