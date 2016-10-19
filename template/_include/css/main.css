@@ -334,21 +334,9 @@ h3.spec {
 	text-transform: uppercase;	
 }
 
-#home-slider .content-red {
-	color: #DE5E60;
-	/*background: url(../img/logo/HaXoft.png) no-repeat;*/
-	/*width: 20px;*/
-	/*height: 20px;*/
-	/*!*text-indent: -9999px;*!*/
-	/*display: block;*/
-	/*opacity: 1;*/
-	/*filter: alpha(opacity=100);*/
-
-	/*-webkit-transition: opacity 0.25s ease-in-out 0s;*/
-	/*-moz-transition: opacity 0.25s ease-in-out 0s;*/
-	/*-o-transition: opacity 0.25s ease-in-out 0s;*/
-	/*transition: opacity 0.25s ease-in-out 0s;*/
-}
+/*#home-slider .content-red {*/
+	/*color: #DE5E60;*/
+/*}*/
 
 #home-slider .control-nav {
 	position: absolute;
@@ -521,17 +509,17 @@ header #logo {
 
 header #logo a {
 	background: url(../img/logo.png) no-repeat;
-	width: 96px;
+	width: 120px;
 	height: 30px;
 	text-indent: -9999px;
 	display: block;
 	opacity: 1;
 	filter: alpha(opacity=100);
 	
-	-webkit-transition: opacity 0.25s ease-in-out 0s;	
+	-webkit-transition: opacity 0.25s ease-in-out 0s;
 	   -moz-transition: opacity 0.25s ease-in-out 0s;
 		 -o-transition: opacity 0.25s ease-in-out 0s;
-		    transition: opacity 0.25s ease-in-out 0s;	
+		    transition: opacity 0.25s ease-in-out 0s;
 }
 
 header #logo a:hover {
@@ -798,6 +786,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .profile-description {
+	text-align: justify;
 	margin-bottom: 25px;	
 }
 
