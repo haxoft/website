@@ -776,6 +776,50 @@ nav#menu #menu-nav li a:hover {
 	filter: alpha(opacity=100);
 }
 
+#work ul li a {
+    border: 2px solid #8a959e;
+    color: #8a959e;
+    width: 100px !important;
+    height:100px !important;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    background-color: #3C3F45
+}
+
+#work ul li a:hover , #work ul a:focus{
+    background-color: #3C3F45;
+}
+
+#work ul li.active a {
+    border-color: #DE5E60 !important;
+    color: #DE5E60 !important;
+}
+
+#work ul li a:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+#work ul li a span {
+    font-size: 200%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#work div.tab-pane h3.tab-title {
+    color: #DE5E60;
+    font-weight: bold;
+}
+
+#work div.tab-pane {
+    text-align: center;
+}
+
 
 /* ==================================================
    About Section
