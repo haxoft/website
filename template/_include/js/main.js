@@ -21,7 +21,36 @@ BRUSHED.mobileNav = function(){
 			$('#mobile-nav').removeClass('open');	
 		}
 	}
-}
+};
+
+BRUSHED.resizeLogo = function () {
+	var windowWidth = $(window).width();
+
+	if (windowWidth <= 979) {
+		$('#home-slider .slide-content').css('font-size', '30px');
+		$('div .slide-content').find('img').css({"width": "22.5",  "height" : "22.5"});//set the object sizes
+
+	} else {
+		$('#home-slider .slide-content').css('font-size', '60px');
+		$('div .slide-content').find('img').css({"width": "45",  "height" : "45"});
+	}
+};
+
+BRUSHED.getLogo = function () {
+	var windowWidth = $(window).width();
+
+	var width;
+	var height;
+	var html;
+	if (windowWidth <= 979) {
+		$('#home-slider .slide-content').css('font-size', '30px');
+		html = '<p>HAXOFT<img src="_include/img/logo/HaXoft.png" align="top" width=' + 22.5 + 'height=' + 22.5 + '/></p>';
+	} else {
+		$('#home-slider .slide-content').css('font-size', '60px');
+		html = '<p>HAXOFT<img src="_include/img/logo/HaXoft.png" align="top" width=' + 45 + 'height=' + 45 + '/></p>';
+	}
+	return html;
+};
 
 BRUSHED.listenerMenu = function(){
 	$('#mobile-nav').on('click', function(e){
@@ -51,7 +80,7 @@ BRUSHED.slider = function(){
 		// Functionality
 		slideshow               :   1,			// Slideshow on/off
 		autoplay				:	1,			// Slideshow starts playing automatically
-		start_slide             :   1,			// Start slide (0 is random)
+		start_slide             :   1,	 		// Start slide (0 is random)
 		stop_loop				:	0,			// Pauses slideshow on last slide
 		random					: 	0,			// Randomize slide order (Ignores start slide)
 		slide_interval          :   6000,		// Length between transitions
@@ -77,10 +106,10 @@ BRUSHED.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '_include/img/slider-images/image01.jpg', title : '<div class="slide-content"><p>HA<span class="content-red">X</span>OFT<img src="_include/img/logo/HaXoft.png" align="top" width="45" height="45"/></p></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content"><p>HA<span class="content-red">X</span>OFT<img src="_include/img/logo/HaXoft.png" align="top" width="45" height="45"/></p></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content"><p>HA<span class="content-red">X</span>OFT<img src="_include/img/logo/HaXoft.png" align="top" width="45" height="45"/></p></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content"><p>HA<span class="content-red">X</span>OFT<img src="_include/img/logo/HaXoft.png" align="top" width="45" height="45"/></p></div>', thumb : '', url : ''}
+											{image : '_include/img/slider-images/image01.jpg', title : '<div class="slide-content">' + BRUSHED.getLogo() + '</div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content">' + BRUSHED.getLogo() + '</div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content">' + BRUSHED.getLogo() + '</div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content">' + BRUSHED.getLogo() + '</div>', thumb : '', url : ''}
 									],
 									
 		// Theme Options			   
@@ -432,6 +461,7 @@ $(document).ready(function(){
 	
 	BRUSHED.nav();
 	BRUSHED.mobileNav();
+	BRUSHED.resizeLogo();
 	BRUSHED.listenerMenu();
 	BRUSHED.menu();
 	BRUSHED.goSection();
@@ -449,6 +479,7 @@ $(document).ready(function(){
 
 $(window).resize(function(){
 	BRUSHED.mobileNav();
+	BRUSHED.resizeLogo();
 });
 
 });
