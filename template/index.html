@@ -61,6 +61,7 @@
 
 <!-- Modernizr -->
 <script src="_include/js/modernizr.js"></script>
+<script src="_include/js/jquery-3.1.1.min.js"></script>
 
 <!-- Analytics -->
 <!--<script type="text/javascript">-->
@@ -132,7 +133,7 @@
 <!-- End Header -->
 
 <!-- Our Values Section -->
-<div id="work" class="page">
+<div id="values" class="page">
 	<div class="container">
     	<!-- Title Page -->
         <div class="row">
@@ -145,17 +146,80 @@
         <!-- End Title Page -->
 
         <div class="row">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#passion" data-toggle="tab" > <span class="font-icon-heart"></span> </a></li>
-                <li><a href="#excellence" data-toggle="tab" > <span class="font-icon-magic"></span> </a></li>
-                <li><a href="#honesty" data-toggle="tab" > <span class="font-icon-certificate"></span> </a></li>
-                <li><a href="#respect" data-toggle="tab" > <span class="font-icon-user-border"></span> </a></li>
-                <li><a href="#humble" data-toggle="tab" > <span class="font-icon-group"></span> </a></li>
-                <li><a href="#blame" data-toggle="tab" > <span class="font-icon-bolt"></span> </a></li>
-                <li><a href="#healthiness" data-toggle="tab" > <span class="font-icon-plus-sign"></span> </a></li>
-                <li><a href="#celebrate" data-toggle="tab" > <span class="font-icon-glass"></span> </a></li>
+            <ul class="nav nav-tabs circle-container">
+                <li id="passion-nav" class="active"><a href="#passion" data-toggle="tab" > <span class="font-icon-heart"></span> </a></li>
+                <li id="excellence-nav"><a href="#excellence" data-toggle="tab" > <span class="font-icon-magic"></span> </a></li>
+                <li id="honesty-nav"><a href="#honesty" data-toggle="tab" > <span class="font-icon-certificate"></span> </a></li>
+                <li id="respect-nav"><a href="#respect" data-toggle="tab" > <span class="font-icon-user-border"></span> </a></li>
+                <li id="humble-nav"><a href="#humble" data-toggle="tab" > <span class="font-icon-group"></span> </a></li>
+                <li id="blame-nav"><a href="#blame" data-toggle="tab" > <span class="font-icon-bolt"></span> </a></li>
+                <li id="healthiness-nav"><a href="#healthiness" data-toggle="tab" > <span class="font-icon-plus-sign"></span> </a></li>
+                <li id="celebrate-nav"><a href="#celebrate" data-toggle="tab" > <span class="font-icon-glass"></span> </a></li>
             </ul>
-            <div class="tab-content">
+        </div>
+        <script type="text/javascript">
+            var passion = document.getElementById("passion-nav");
+            var excellence = document.getElementById("excellence-nav");
+            var honesty = document.getElementById("honesty-nav");
+            var respect = document.getElementById("respect-nav");
+            var humble = document.getElementById("humble-nav");
+            var blame = document.getElementById("blame-nav");
+            var healthiness = document.getElementById("healthiness-nav");
+            var celebrate = document.getElementById("celebrate-nav");
+            
+            // order important!
+            var allNavs = [honesty,respect,humble,blame,healthiness,celebrate,passion,excellence];
+            
+            var currentRotation = 0;
+            var radius = 200;
+            
+            updatePositions(0);
+
+            passion.onclick = function() {
+                updatePositions(0);
+            }
+            excellence.onclick = function() {
+                updatePositions(-45);
+            }
+            honesty.onclick = function() {
+                updatePositions(-90);
+            }
+            respect.onclick = function() {
+                updatePositions(-135);
+            }
+            humble.onclick = function() {
+                updatePositions(-180);
+            }
+            blame.onclick = function() {
+                updatePositions(-225);
+            }
+            healthiness.onclick = function() {
+                updatePositions(-270);
+            }
+            celebrate.onclick = function() {
+                updatePositions(-315);
+            }
+            
+            function updatePositions(newRotation) {
+                while (newRotation > currentRotation) {
+                    newRotation -= 360;
+                }
+                
+                var transitionTime = (currentRotation - newRotation) / 180;
+                if (transitionTime < 1) transitionTime = 1;
+                
+                for (var i = 0; i < allNavs.length; i++) {
+                    var nav = allNavs[i];
+                    var rotation = newRotation + i*45;
+                    nav.style.transition = "transform " + transitionTime + "s ease-in-out";
+                    nav.style.transform = "rotate(" + rotation + "deg) translateX(" + radius + "px) rotate(" + (-rotation) + "deg)";
+                }
+                
+                currentRotation = newRotation;
+            }
+        </script>
+        <div class="row">
+            <div class="tab-content" id="values-content">
                 <div class="tab-pane fade in active" id="passion">
                     <h3 class="tab-title">Work with Passion</h3>
                     <h3>We are not just here to work, but also to have fun.</h3>
