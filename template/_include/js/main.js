@@ -44,10 +44,10 @@ BRUSHED.getLogo = function () {
 	var html;
 	if (windowWidth <= 979) {
 		$('#home-slider .slide-content').css('font-size', '30px');
-		html = '<p>HAXOFT<img src="_include/img/logo/HaXoft.png" align="top" width=' + 22.5 + 'height=' + 22.5 + '/></p>';
+		html = '<p><span>HAXOFT</span><img src="_include/img/logo/HaXoft.png" align="top" width=' + 22.5 + 'height=' + 22.5 + '/></p>';
 	} else {
 		$('#home-slider .slide-content').css('font-size', '60px');
-		html = '<p>HAXOFT<img src="_include/img/logo/HaXoft.png" align="top" width=' + 45 + 'height=' + 45 + '/></p>';
+		html = '<p><span>HAXOFT</span><img src="_include/img/logo/HaXoft.png" align="top" width=' + 45 + 'height=' + 45 + '/></p>';
 	}
 	return html;
 };

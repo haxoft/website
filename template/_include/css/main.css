@@ -1460,7 +1460,19 @@ footer .credits {
 /* logo improving in the slider */
 .slide-content > p > img {
     margin-right: 4px;
-    position: relative;
-    bottom: 7px
+    display: inline-block;
+    vertical-align: middle;
 }
 
+.slide-content > p:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.slide-content > p > span {
+    display: inline-block;
+    vertical-align: middle;
+}
