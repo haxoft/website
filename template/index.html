@@ -146,18 +146,24 @@
         <!-- End Title Page -->
 
         <div class="row">
-            <ul class="nav nav-tabs circle-container">
-                <li id="passion-nav" class="active"><a href="#passion" data-toggle="tab" > <span class="font-icon-heart"></span> </a></li>
-                <li id="excellence-nav"><a href="#excellence" data-toggle="tab" > <span class="font-icon-magic"></span> </a></li>
-                <li id="honesty-nav"><a href="#honesty" data-toggle="tab" > <span class="font-icon-certificate"></span> </a></li>
-                <li id="respect-nav"><a href="#respect" data-toggle="tab" > <span class="font-icon-user-border"></span> </a></li>
-                <li id="humble-nav"><a href="#humble" data-toggle="tab" > <span class="font-icon-group"></span> </a></li>
-                <li id="blame-nav"><a href="#blame" data-toggle="tab" > <span class="font-icon-bolt"></span> </a></li>
-                <li id="healthiness-nav"><a href="#healthiness" data-toggle="tab" > <span class="font-icon-plus-sign"></span> </a></li>
-                <li id="celebrate-nav"><a href="#celebrate" data-toggle="tab" > <span class="font-icon-glass"></span> </a></li>
-            </ul>
+            <div class="span12">
+                <ul id="circle-container" class="nav nav-tabs">
+                    <li id="passion-nav" class="active"><a href="#passion" data-toggle="tab" > <span class="font-icon-heart"></span> </a></li>
+                    <li id="excellence-nav"><a href="#excellence" data-toggle="tab" > <span class="font-icon-magic"></span> </a></li>
+                    <li id="honesty-nav"><a href="#honesty" data-toggle="tab" > <span class="font-icon-certificate"></span> </a></li>
+                    <li id="respect-nav"><a href="#respect" data-toggle="tab" > <span class="font-icon-user-border"></span> </a></li>
+                    <li id="humble-nav"><a href="#humble" data-toggle="tab" > <span class="font-icon-group"></span> </a></li>
+                    <li id="blame-nav"><a href="#blame" data-toggle="tab" > <span class="font-icon-bolt"></span> </a></li>
+                    <li id="healthiness-nav"><a href="#healthiness" data-toggle="tab" > <span class="font-icon-plus-sign"></span> </a></li>
+                    <li id="celebrate-nav"><a href="#celebrate" data-toggle="tab" > <span class="font-icon-glass"></span> </a></li>
+                </ul>
+            </span>
         </div>
         <script type="text/javascript">
+            var circleContainer = document.getElementById("circle-container");
+            
+            var icons = circleContainer.getElementsByTagName("span");
+        
             var passion = document.getElementById("passion-nav");
             var excellence = document.getElementById("excellence-nav");
             var honesty = document.getElementById("honesty-nav");
@@ -172,7 +178,15 @@
             
             var currentRotation = 0;
             var radius = 200;
+            var baseIconFontSize = 36;
             
+            window.onresize = function() {
+                radius = Math.min(200, 200 * circleContainer.offsetWidth / 480);
+                updateIconSize();
+                updatePositions(currentRotation, true);
+            }
+            
+            updateIconSize();
             updatePositions(0);
 
             passion.onclick = function() {
@@ -200,13 +214,18 @@
                 updatePositions(-315);
             }
             
-            function updatePositions(newRotation) {
+            function updatePositions(newRotation, isInstant) {
                 while (newRotation > currentRotation) {
                     newRotation -= 360;
                 }
                 
-                var transitionTime = (currentRotation - newRotation) / 180;
-                if (transitionTime < 1) transitionTime = 1;
+                var transitionTime;
+                if (isInstant) {
+                    transitionTime = 0;
+                } else {
+                    var transitionTime = (currentRotation - newRotation) / 180;
+                    if (transitionTime < 1) transitionTime = 1;
+                }
                 
                 for (var i = 0; i < allNavs.length; i++) {
                     var nav = allNavs[i];
@@ -216,6 +235,15 @@
                 }
                 
                 currentRotation = newRotation;
+            }
+            
+            function updateIconSize() {
+                for (var i = 0; i < icons.length; i++) {
+                    var newIconFontSize = baseIconFontSize * icons[i].parentNode.offsetWidth / 100;
+                    console.log(icons[i].parentNode.offsetWidth)
+                    console.log(newIconFontSize);
+                    icons[i].style.fontSize = newIconFontSize + "px";
+                }
             }
         </script>
         <div class="row">
