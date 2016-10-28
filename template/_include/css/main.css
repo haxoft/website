@@ -778,8 +778,6 @@ nav#menu #menu-nav li a:hover {
     max-height: 480px;
     width: 80%;
     height: auto;
-	margin-top: 30px;
-    margin-bottom: 60px !important;
     margin-left: auto !important;
     margin-right: auto !important;    
 }
@@ -838,7 +836,7 @@ nav#menu #menu-nav li a:hover {
     vertical-align: middle;
 }
 
-#values div.tab-pane h3.tab-title {
+.tab-title {
     color: #DE5E60;
     font-weight: bold;
 }

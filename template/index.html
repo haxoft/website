@@ -157,10 +157,49 @@
                     <li id="healthiness-nav"><a href="#healthiness" data-toggle="tab" > <span class="font-icon-plus-sign"></span> </a></li>
                     <li id="celebrate-nav"><a href="#celebrate" data-toggle="tab" > <span class="font-icon-glass"></span> </a></li>
                 </ul>
-            </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+                <div class="tab-content" id="values-content">
+                    <div class="tab-pane fade in active" id="passion">
+                        <h3 class="tab-title">Work with Passion</h3>
+                        <h3>We are not just here to work, but to have fun as well.</h3>
+                    </div>
+                    <div class="tab-pane fade" id="excellence">
+                        <h3 class="tab-title">Deliver Excellence</h3>
+                        <h3>Good is the enemy of great, and we only deliver the great.</h3>
+                    </div>
+                    <div class="tab-pane fade" id="honesty">
+                        <h3 class="tab-title">Honesty and Sincerity</h3>
+                        <h3>Being honest with our collegues and customers. We don't lie to sell.</h3>
+                    </div>
+                    <div class="tab-pane fade" id="respect">
+                        <h3 class="tab-title">Respect</h3>
+                        <h3>Treat others the way you want to be treated.</h3>
+                    </div>
+                    <div class="tab-pane fade" id="humble">
+                        <h3 class="tab-title">Be humble</h3>
+                        <h3>Even if you're the boss, don't forget that every voice matters. You are still as much human as anyone else.</h3>
+                    </div>
+                    <div class="tab-pane fade" id="blame">
+                        <h3 class="tab-title">No blame game</h3>
+                        <h3>Don't blame others, work on a solution instead.</h3>
+                    </div>
+                    <div class="tab-pane fade" id="healthiness">
+                        <h3 class="tab-title">Healthiness</h3>
+                        <h3>We care for each other's health, both mental and physical.</h3>
+                    </div>
+                    <div class="tab-pane fade" id="celebrate">
+                        <h3 class="tab-title">Celebrate Success</h3>
+                        <h3>When we have success reaching a goal, there's a party.</h3>
+                    </div>
+                </div>
+            </div>
         </div>
         <script type="text/javascript">
             var circleContainer = document.getElementById("circle-container");
+            var valuesContents = document.getElementById("values-content").getElementsByTagName("h3");
             
             var icons = circleContainer.getElementsByTagName("span");
         
@@ -179,15 +218,20 @@
             var currentRotation = 0;
             var radius = 200;
             var baseIconFontSize = 36;
+            var baseTextFontSize = 24;
             
             window.onresize = function() {
                 radius = Math.min(200, 200 * circleContainer.offsetWidth / 480);
                 updateIconSize();
+                updateCircleContainerMargin();
                 updatePositions(currentRotation, true);
+                updateTextSize();
             }
             
             updateIconSize();
+            updateCircleContainerMargin();
             updatePositions(0);
+            updateTextSize();
 
             passion.onclick = function() {
                 updatePositions(0);
@@ -240,48 +284,21 @@
             function updateIconSize() {
                 for (var i = 0; i < icons.length; i++) {
                     var newIconFontSize = baseIconFontSize * icons[i].parentNode.offsetWidth / 100;
-                    console.log(icons[i].parentNode.offsetWidth)
-                    console.log(newIconFontSize);
                     icons[i].style.fontSize = newIconFontSize + "px";
                 }
             }
+            
+            function updateCircleContainerMargin() {
+                circleContainer.style.marginBottom = Math.min(60, 60 * circleContainer.offsetWidth / 480 ) + "px";
+                circleContainer.style.marginTop = Math.min(30, Math.max(0, 30 - 60 * (480 - circleContainer.offsetWidth) / 480)) + "px";
+            }
+            
+            function updateTextSize() {
+                for (var i = 0; i < valuesContents.length; i++) {
+                    valuesContents[i].style.fontSize = 24 - (12 * (480 - circleContainer.offsetWidth) / 480) + "px";
+                }
+            }
         </script>
-        <div class="row">
-            <div class="tab-content" id="values-content">
-                <div class="tab-pane fade in active" id="passion">
-                    <h3 class="tab-title">Work with Passion</h3>
-                    <h3>We are not just here to work, but to have fun as well.</h3>
-                </div>
-                <div class="tab-pane fade" id="excellence">
-                    <h3 class="tab-title">Deliver Excellence</h3>
-                    <h3>Good is the enemy of great, and we only deliver the great.</h3>
-                </div>
-                <div class="tab-pane fade" id="honesty">
-                    <h3 class="tab-title">Honesty and Sincerity</h3>
-                    <h3>Being honest with our collegues and customers. We don't lie to sell.</h3>
-                </div>
-                <div class="tab-pane fade" id="respect">
-                    <h3 class="tab-title">Respect</h3>
-                    <h3>Treat others the way you want to be treated.</h3>
-                </div>
-                <div class="tab-pane fade" id="humble">
-                    <h3 class="tab-title">Be humble</h3>
-                    <h3>Even if you're the boss, don't forget that every voice matters. You are still as much human as anyone else.</h3>
-                </div>
-                <div class="tab-pane fade" id="blame">
-                    <h3 class="tab-title">No blame game</h3>
-                    <h3>Don't blame others, work on a solution instead.</h3>
-                </div>
-                <div class="tab-pane fade" id="healthiness">
-                    <h3 class="tab-title">Healthiness</h3>
-                    <h3>We care for each other's health, both mental and physical.</h3>
-                </div>
-                <div class="tab-pane fade" id="celebrate">
-                    <h3 class="tab-title">Celebrate Success</h3>
-                    <h3>When we have success reaching a goal, there's a party.</h3>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <!-- End Our Values Section -->
