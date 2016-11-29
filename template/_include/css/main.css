@@ -1214,11 +1214,21 @@ footer {
 }
 
 footer .credits {
+  display: inline-block;
 	color: #FFFFFF;
 	font-size: 13px;
 	margin-bottom: 0;
 	padding: 20px 0;
 	text-transform: uppercase;	
+}
+
+footer .impressum {
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 13px;
+  margin-bottom: 0;
+  padding: 20px 0 20px 20px;
+  text-transform: uppercase;
 }
 
 /* ==================================================
