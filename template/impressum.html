@@ -61,7 +61,6 @@
 
 <!-- Modernizr -->
 <script src="_include/js/modernizr.js"></script>
-<script src="_include/js/jquery-3.1.1.min.js"></script>
 
 <!-- Analytics -->
 <!--<script type="text/javascript">-->
@@ -92,7 +91,7 @@
 <!-- End of Splash Screen -->
 
 <!-- Homepage Slider -->
-<!--<div id="home-slider">	
+<div id="home-slider">
     <div class="overlay"></div>
 
     <div class="slider-text">
@@ -120,11 +119,11 @@
         
         <nav id="menu">
         	<ul id="menu-nav">
-            	<li><a href="index.html">Home</a></li>
-				<li><a href="index.html#hxt">HXT</a></li>
-                <li><a href="index.html#values">Our Values</a></li>
-                <li><a href="index.html#about">About Us</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+            	<li><a href="index.html" class="external">Home</a></li>
+				<li><a href="index.html#hxt" class="external">HXT</a></li>
+                <li><a href="index.html#values" class="external">Our Values</a></li>
+                <li><a href="index.html#about" class="external">About Us</a></li>
+                <li><a href="index.html#contact" class="external">Contact</a></li>
 				<!--<li><a href="shortcodes.html" class="external">Shortcodes</a></li>-->
             </ul>
         </nav>
@@ -133,7 +132,7 @@
 </header>
 <!-- End Header -->
 
-<div class="page">
+<div class="page" id="impressum">
   <div class="container height-full">
     <h2>Angaben gemäß § 5 TMG:</h2>
     <p>
@@ -150,7 +149,7 @@
   
 <!-- Footer -->
 <footer>
-  <a class="pull-left impressum" href="impressum.html">Impressum</a>
+  <a class="pull-left impressum" href="impressum.html#impressum">Impressum</a>
 	<p class="credits">&copy;2016 HAXOFT. <a href="http://themes.alessioatzeni.com/html/brushed/" title="Brushed | Responsive One Page Template">Brushed Template</a> by <a href="http://www.alessioatzeni.com/" title="Alessio Atzeni | Web Designer &amp; Front-end Developer">Alessio Atzeni</a></p>
 </footer>
 <!-- End Footer -->
