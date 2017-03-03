@@ -183,7 +183,7 @@
                   <div class="span8 info-block" align=justify>
                       <p>
                           Another week - another 7 days without a customer meeting.
-                          Originally, we we expected to see Prof. Gaedke on Wednesday. Unfortunately, he did not have time for a meeting.
+                          Originally, we expected to see Prof. Gaedke on Wednesday. Unfortunately, he did not have time for a meeting.
                           It is quite hard to make significant progress in a project without showing it to somebody who is not directly involved in it. We
                           have been missing a more frequent input from an "external viewer" along the development.
                           As we also experienced, it is motivating to know that the customer is interested in our product and being able to
@@ -202,17 +202,17 @@
                           Regardless of whether the meeting took place or not, we continued with the development of the HXT and the corresponding tasks.
                           Having in mind the fact that the planspiel is coming to its end, we started to sketch out our business plan.
                           Our business model served as a good foundation for this purpose. Within this week, we made some notes about different
-                          thoughts we collected and drafted the concrete sections. In order to have a first draft of our business plan, we will have to
+                          thoughts we collected and drafted the concrete sections. In order to have the first draft of our business plan, we will have to
                           do some more research and continue with the task during the next week.
                           <br/>
                           <br/>
                           As we already mentioned, the development of the project still continues. We managed to add user management
                           to the backend and the frontend of the application, as well as the corresponding session management. This functionality
                           allows the HXT to recognize different users (with different access rights) and to serve resources to these users accordingly.
-                          One part of this functionality that was especially time consuming was the authentication of users (user agents) making requests
+                          One part of this functionality that was especially time-consuming was the authentication of users (user agents) making requests
                           to the HXT plugin. The user management is handled at the "front-line" by <a href="https://de.atlassian.com/">Atlassian</a>
                           and our plugin just simply receives a "claim" containing the information about the user making the request. This kind of delegated
-                          authentication was a bit confusing at the beginning, since it comprises 3 entities (Atlassian, HXT, User agent)
+                          authentication was a bit confusing at the beginning since it comprises 3 entities (Atlassian, HXT, User agent)
                           sending and receiving a <a href="https://tools.ietf.org/html/rfc7519">JWT</a>.
                           <br/>
                           To close this entry with some good news, we are happy to announce that we are now very close to the first
@@ -230,28 +230,36 @@
                   <div class="span2"></div>
                   <div class="span8 info-block" align=justify>
                       <p>
-                          We did it! Our weekly log is now fully filled until now and so everyone can now read our whole weekly log at our website.
-                          So we wrote this week the last entires that were missing in fulltext. And uploaded now also all the entires to our homepage.
-                          From now on, we will continue to write every week a new entry to our diary here.
-                          And so every interest can see what is going on right now behind the scenes.
+                          So we finally did it! Our weekly log is now fully complete until this point and everybody is free to read it on our website and follow
+                          us during the development. We also introduced some hyperlinks for an improved reader experience, especially for those without
+                          deeper technical knowledge. From now on, we have committed to deliver new entries as new weeks come. This way, we should be able to
+                          describe in more detail what we exactly achieved and what lies in front of us - always from the perspective of the current point in time.
                           <br/>
                           <br/>
-                          To come also to some more important stuff we did this week, we should start with the fact, that again this week,
-                          was no meeting with Prof. Gaedke, but of course the team itself met as every week.
-                          Within this meeting we decided that we will focus this week on the first idea we mentioned already last week.
-                          So we started to implement our IR idea for the core section of HXT.
-                          One more thing to have a web application was the direct sharing between users.
-                          Well, until now there is no sharing of the users with Atlassian, so we need also to connect our system with the Atlassian user management.
-                          To have the sharing of requirements for a given call for proposals also included in our MVP, we started the connection to the user management of Atlassian this week.
-                          While we finished, as mentioned in the beginning of this log, our log itself this week, we also continued our CANVAS model.
-                          Because at first we presented two weeks ago our first image of the CANVAS to Prof. Gaedke.
-                          He was there also not amused that we did not clearly show him prizes within the costs seciton of the CANVAS.
-                          We did some assuming there but in our first CANVAS this section was not filled with that much details.
-                          So we continued also there to have now a fully filled CANVAS model with also some real numbers for the costs.
-                          With those we can now also show our CANVAS to potential investors to show them, how we want to earn money, while having of course some monthly costs for
-                          ourselves, the server or rather our infrastructure and for the tools we need to develop.
-                          Right now the tools for developing do not cost anything, because we are still students and thereby have licences for our preferred IDE's.
-                          But after our studies and the end of the current planspiel we will have some costs there due to the fact that we are then not anymore students.
+                          Regarding the events that occurred this week, we were again not able to meet with prof. Gaedke. Nevertheless, we met each other in order
+                          to coordinate the following steps, as we do every week. Within this meeting, we agreed on some details regarding the core component that
+                          provides the information extraction functionality for the HXT plugin.
+                          <br/>
+                          Another high priority requirement to implement is the user and session management. This functionality forms the basis for allowing
+                          projects sharing among users. Project sharing is among some of the features we intended to support, but we are not confident we will
+                          be able to finish it until the final pitch/presentation day. Nevertheless, the system should be ready for such an extension.
+                          The current state of the plugin does not support any user management and only recognizes a single user, which should be changed as soon
+                          as possible. In order to support user management, we will have to connect the plugin backend with the
+                          <a href="https://developer.atlassian.com/static/connect/docs/latest/concepts/authentication.html">Atlassian authentication</a>
+                          and user management system.
+                          This trilateral process (user, HXT, Atlassian) will maybe take some effort and time, but we are confident that we will figure it out.
+                          <br/>
+                          <br/>
+                          After finishing all the entries of this log (which takes a significant amount of time), we continued to improve out our
+                          <a href="https://en.wikipedia.org/wiki/Business_Model_Canvas">CANVAS model</a>.
+                          The first version of our CANVAS was consulted with Prof. Gaedke two weeks ago at our customer meeting. To summarize the outcome
+                          we can say that he was not particularly happy with the fact that we did not present any meaningful financial entries
+                          in our "costs section". We did not leave the entire section out, but the entries were not carefully thought out and they
+                          lacked some detailed reasoning - an economist would say that our numbers "were not adding up". In order to fix this, we set up
+                          a team meeting and performed some brainstorming on the different reasons and sources of different financial entries.
+                          At the end, we were able to finish the CANVAS. This time with some more realistic numbers inside it. This version might potentially
+                          serve as a basis for the communication with investors since it shows the basic reasoning behind our economic viability - how much
+                          money we want to earn, how we want to earn it, the basic costs of running our company and some other economic details.
                       </p>
                   </div>
                   <div class="span2"></div>
