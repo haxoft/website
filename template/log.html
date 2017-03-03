@@ -182,31 +182,43 @@
                   <div class="span2"></div>
                   <div class="span8 info-block" align=justify>
                       <p>
-                          Another week, another 7 days without a meeting.
-                          At first we thought to see Prof. Gaedke at wednesday, but unfortunately he did not have time for us.
-                          It is somehow hard to go on and on with a project, while not showing it to someone who is not directly involved.
-                          We experience that it is motivating to know that our customer is interested in our product and talks with us about it in detail.
-                          So weekly meetings would of course be very nice.
-                          Since we would have more direct feedback, how we perform and where we currently failed a bit, the whole project would run even better.
-                          Of course we are doing as good as we know, and try to focus on our own.
-                          But still, a discussion with a guy not directly involved in our team is always a nice to have.
-                          Whereas the professor seems to be for us the perfect guy due to his special role of being an adviser and the very first customer.
-                          Furthermore Prof. Gaedke told us this week, that we will meet him probably at the coming tuesday.
+                          Another week - another 7 days without a customer meeting.
+                          Originally, we we expected to see Prof. Gaedke on Wednesday. Unfortunately, he did not have time for a meeting.
+                          It is quite hard to make significant progress in a project without showing it to somebody who is not directly involved in it. We
+                          have been missing a more frequent input from an "external viewer" along the development.
+                          As we also experienced, it is motivating to know that the customer is interested in our product and being able to
+                          discuss some details with him is crucial to keep the right direction during development.
+                          Having that in mind, weekly meetings would be a nice thing to have.
+                          This way, we would be able to have more frequent feedback on how we performed/are performing and the adjustments we should make.
+                          We are however still doing our best to deal with the current conditions and situation. After all, adjusting to
+                          unexpected situations is a key skill of any development team.
+                          It is worth mentioning that we very much appreciate the possibility to be consulting issues regarding our emerging product
+                          with our prof., as his planspiel role is twofold: our counselor and the first customer at the same time.
+                          <br/>
+                          After the original Wednesday meeting, which did not take place, we received information from the prof. that the next
+                          customer meeting should be on Tuesday next week. We are looking forward to it!
                           <br/>
                           <br/>
-                          However, we were of course going on with our project this week.
-                          As our planspiel comes nearly to an end, we started to write our business plan.
-                          Our business model is thereby of course a good foundation.
-                          Within this week, we started to make some notes and some thoughts about the specifc sections.
-                          Even more we wrote the first draft of some sections of the plan.
-                          To bring the plan to a first draft, we need to spend some more time in the next week.
+                          Regardless of whether the meeting took place or not, we continued with the development of the HXT and the corresponding tasks.
+                          Having in mind the fact that the planspiel is coming to its end, we started to sketch out our business plan.
+                          Our business model served as a good foundation for this purpose. Within this week, we made some notes about different
+                          thoughts we collected and drafted the concrete sections. In order to have a first draft of our business plan, we will have to
+                          do some more research and continue with the task during the next week.
                           <br/>
-                          Furthermore we proceeded with our HXT. So for now, we added already user session management to our middleware and our backend.
-                          So requesting specific folders or projects within HXT is now limited to the user who has access rights to this project.
-                          Moreover the personal 'workdesk' in HXT is now really personal, hence one user only see his projects.
                           <br/>
-                          Giving the most important news at the end, we are now also very close to extract our first common requirements.
-                          The first two regex are done and we are very close to included them to the HXT!!
+                          As we already mentioned, the development of the project still continues. We managed to add user management
+                          to the backend and the frontend of the application, as well as the corresponding session management. This functionality
+                          allows the HXT to recognize different users (with different access rights) and to serve resources to these users accordingly.
+                          One part of this functionality that was especially time consuming was the authentication of users (user agents) making requests
+                          to the HXT plugin. The user management is handled at the "front-line" by <a href="https://de.atlassian.com/">Atlassian</a>
+                          and our plugin just simply receives a "claim" containing the information about the user making the request. This kind of delegated
+                          authentication was a bit confusing at the beginning, since it comprises 3 entities (Atlassian, HXT, User agent)
+                          sending and receiving a <a href="https://tools.ietf.org/html/rfc7519">JWT</a>.
+                          <br/>
+                          To close this entry with some good news, we are happy to announce that we are now very close to the first
+                          automated extraction of some important proposal requirements! We have found the first two
+                          <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a> (which are
+                          both very big and ugly creatures) and we are currently trying to insert them in the extraction module of the HXT plugin.
                       </p>
                   </div>
                   <div class="span2"></div>
