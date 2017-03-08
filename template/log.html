@@ -210,15 +210,16 @@
                           to the backend and the frontend of the application, as well as the corresponding session management. This functionality
                           allows the HXT to recognize different users (with different access rights) and to serve resources to these users accordingly.
                           One part of this functionality that was especially time-consuming was the authentication of users (user agents) making requests
-                          to the HXT plugin. The user management is handled at the "front-line" by <a href="https://de.atlassian.com/">Atlassian</a>
+                          to the HXT plugin. The user management is handled at the "front-line" by <a target="_blank" href="https://de.atlassian.com/">Atlassian</a>
                           and our plugin just simply receives a "claim" containing the information about the user making the request. This kind of delegated
                           authentication was a bit confusing at the beginning since it comprises 3 entities (Atlassian, HXT, User agent)
-                          sending and receiving a <a href="https://tools.ietf.org/html/rfc7519">JWT</a>.
+                          sending and receiving a <a target="_blank" href="https://tools.ietf.org/html/rfc7519">JWT</a>.
                           <br/>
                           To close this entry with some good news, we are happy to announce that we are now very close to the first
                           automated extraction of some important proposal requirements! We have found the first two optimized
-                          <a href="https://en.wikipedia.org/wiki/Information_retrieval">IR queries</a> for extraction of our first two requirements (which are
-                          both very big and ugly creatures) and we are currently trying to insert them in the extraction module of the HXT plugin.
+                          <a target="_blank" href="https://en.wikipedia.org/wiki/Information_retrieval">IR queries</a> for extraction of our
+                          first two requirements (which are both very big and ugly creatures) and we are currently trying to insert them in the
+                          extraction module of the HXT plugin.
                       </p>
                   </div>
                   <div class="span2"></div>
@@ -245,13 +246,14 @@
                           be able to finish it before the final pitch/presentation day. Nevertheless, the system should be ready for such an extension.
                           The current state of the plugin does not support any user management and only recognizes a single user, which should be changed as soon
                           as possible. In order to support user management, we will have to connect the plugin backend with the
-                          <a href="https://developer.atlassian.com/static/connect/docs/latest/concepts/authentication.html">Atlassian authentication</a>
+                          <a target="_blank" href="https://developer.atlassian.com/static/connect/docs/latest/concepts/authentication.html">
+                              Atlassian authentication</a>
                           flow and user management system.
                           This trilateral process (user, HXT, Atlassian) will maybe take some effort and time, but we are confident that we will figure it out.
                           <br/>
                           <br/>
                           After finishing all the entries of this log (which takes a significant amount of time), we continued to improve out our
-                          <a href="https://en.wikipedia.org/wiki/Business_Model_Canvas">CANVAS model</a>.
+                          <a target="_blank" href="https://en.wikipedia.org/wiki/Business_Model_Canvas">CANVAS model</a>.
                           The first version of our CANVAS was consulted with Prof. Gaedke two weeks ago at our customer meeting. To summarize the outcome
                           we can say that he was not particularly happy with the fact that we did not present any meaningful financial entries
                           in our "costs section". We did not leave the entire section out, but the entries were not carefully thought out and they
@@ -287,13 +289,19 @@
                           The team meeting this week delivered some promising results. As a result of our brainstorming, we were able to come with
                           some very promising ideas for the core module of the HXT - the module responsible for the requirements extraction. After
                           some research and discussions we have come up with two different approaches of how to deal with the core functionality - one
-                          uses <a href="https://en.wikipedia.org/wiki/Information_retrieval">Information Retrieval</a> and the other
-                          <a href="https://en.wikipedia.org/wiki/Information_extraction">Information Extraction</a>.
+                          uses <a target="_blank" href="https://en.wikipedia.org/wiki/Information_retrieval">Information Retrieval</a> and the other
+                          <a target="_blank" href="https://en.wikipedia.org/wiki/Information_extraction">Information Extraction</a>.
                           Despite their similar names, the two approaches are
-                          <a href="https://www.quora.com/What-is-the-difference-between-Information-Extraction-and-Information-Retrieval">quite different</a>.
+                          <a target="_blank" href="https://www.quora.com/What-is-the-difference-between-Information-Extraction-and-Information-Retrieval">
+                              quite different</a>.
                           One is more related to Natural Language Processing, and the other is rather based on full-text indexing.
                           In the following weeks, we should elaborate a "proof of concept" example for each of them and after that, we will
                           be able to decide for the most promising in terms of time consumption vs effectiveness.
+                          <br/>
+                          As already mentioned, the second approach is based on Information Extraction(IE) and potentially more
+                          complex and time-consuming. In an ideal world, we would have more time (at least more than 3 months) for the implementation
+                          and we would be able to use both approaches in the HXT. The reality, however, is that we have to deliver a running
+                          MVP at the middle of March, which is quite restrictive in terms of time possibilities.
                           <br/>
                           <br/>
                           Apart from researching about different approaches to solve our main problem, we also looked around for some python libraries which
@@ -305,14 +313,8 @@
                           would match each type of requirement. For this reason, we started to sketch such queries - mainly for the most common and simple
                           requirements. It is worth mentioning that our list of the top-priority requirements to extract was previously consulted with
                           one of our early "potential customer"/stakeholder/interviewee - a member of the
-                          <a href="https://vsr.informatik.tu-chemnitz.de/about/people/">VSR team</a>. We arranged a brief consultation
+                          <a target="_blank" href="https://vsr.informatik.tu-chemnitz.de/about/people/">VSR team</a>. We arranged a brief consultation
                           in order to find out whether our list was accurate, and did not contain unnecessary / irrelevant requirements.
-                          <br/>
-                          <br/>
-                          As mentioned earlier, the second approach is based on Information Extraction(IE) and potentially more
-                          complex and time-consuming. In an ideal world, we would have more time (at least more than 3 months) for the implementation
-                          and we would be able to use both approaches in the HXT. The reality, however, is that we have to deliver a running
-                          MVP at the middle of March, which is quite restrictive in terms of time possibilities.
                       </p>
                   </div>
                   <div class="span2"></div>
@@ -324,37 +326,40 @@
                   <div class="span2"></div>
                   <div class="span8 info-block" align=justify>
                       <p>
-                          Unfortunately our start of the week was not that good. We met again at Monday, as the last weeks,
-                          with Prof. Gaedke, but he was not happy about our increment. Moreover he was more like a bit angry.
-                          Well, somehow we can say, yes, there was not that high increment than some other weeks before.
-                          But we still do not really understand why an increment is only an increment if there is that much new to see.
-                          Because he claimed out that we did not do much more visible functionality at the HXT. And yes we did not do that.
-                          We focused last week there on the API and so for monday this increment in the HXT was not visible to a user.
-                          However we of course did some other stuff. Like many research, the homepage and of course the canvas.
-                          But still Prof. Gaedke said, it is no increment if it is not visible. So we should have every week somehow a visible increment in our software.
-                          Even if we do not really understand him fully to the fact we did not have an increment, we can understand him, that he wants to have
-                          every week a visible increment. In the end we learned from meeting, that we should be able to show him new stuff at HXT every week.
-                          That seems to be possible and we now aim on it.
+                          This week's meeting with Prof. Gaedke did not deliver an entirely satisfactory outcome. We met him
+                          on Monday, as in the previous weeks, and he was not too happy with the results we presented.
+                          The reason for his dissatisfaction was the amount of work we presented to him. We worked last week on
+                          the backend and the <a target="_blank" href="https://en.wikipedia.org/wiki/Representational_state_transfer">
+                          REST API </a>, which is not an easily presentable functionality. For this reason, we did
+                          not have a click-able/dynamic/shiny demo to show. As we understood him, we should be always able
+                          to deliver an increment - a working demonstration - of whatever we have built. This is not always possible
+                          in our opinion, but we did get the message.
+                          <br/>
+                          If we knew in advance, that delivering a working "something" is a top priority, we are pretty confident we would
+                          be able to come up with something to show. After all, our UI is relatively ahead in terms of its development degree,
+                          so with a bit more of effort, we would be able to connect the working backend with the UI - at least partially.
+                          The lesson we learned this week is quite clear - no more meetings without working increments!
                           <br/>
                           <br/>
-                          So this week we need again more focus on our research in our magic section. Until now only Valentin had made the research, but to
-                          go on with our philosophy that in major decisions everyone should be happy, everyone needs some knowledge about our core feature.
-                          Hence also Frank and Luis started this week with their knowledge acquisition. Furthermore we need to have a clue how we really want
-                          to proceed in our core or magic section of HXT.
-                          Until now Valentin had several ideas, but without knowledge about NLP it is hard to understand strategies about it.
-                          So we decided that really everyone needs some knowledge there.
-                          Moreover this knowledge of everyone will help us to generate even more and maybe also better ideas due to different researches.
+                          Apart from the backend, we worked on the research side, our homepage and of course the CANVAS. This week,
+                          we need to focus more on the magic part. Until now, the only team member doing research about our
+                          magical (core) functionality has been Valentin. This should, however, change as soon as possible
+                          since we agreed that the core functionality is far too important and it should not be just handled by a single
+                          team member. For this reason, Frank and Luis also started this week with reading some papers about the
+                          topic. Hopefully, as we proceed with the research and more of us get familiar with the topic, we will be
+                          able to come up with more ideas and to deliver better results.
                           <br/>
-                          Additionally we wanted to have a increment in our HXT at the beginning of the new week, so we continued with our connection building within our infrastructure.
-                          Thereby we developed the connection between our server and the user interface.
-                          Therefore we decided on a restful CRUD API with JSON data. So that the user interface or rather our html views can easily adopt the data delivered by our server.
-                          Of course also the views themselves are deliver by the server, but they are not saved in our database and so not the data we are working on.
-                          They are only as the name terms the views for the user to make the data visible.
                           <br/>
-                          As we did included a description section about HXT on our page, we also talked about a weekly log via the button "see what's going on".
-                          Of course right now you are reading our weekly log, but to the end of this week we first designed the weekly log section accordingly to our homepage.
-                          Moreover we wrote the first entry of the full log in text form. Because until then we only had a word document where we pinned our log with keywords
-                          in a bullet list.
+                          In order to have a product increment for the next meeting (hopefully some day next week), we will continue with
+                          the connection of the backend with the UI. We are confident what most of the work could be finished
+                          by next Monday. We also started to write some <a target="_blank" href="https://en.wikipedia.org/wiki/Unit_testing">
+                          unit tests</a> for the backend. We are currently testing only
+                          a subset of the backend functionality, but that will change as we go further with the project. The amount
+                          of code on the server has been increasing significantly, and we feel that it is the right time for
+                          some testing.
+                          <br/>
+                          The entries in this log are newly available through the "see what's going on" button - as you probably noticed since
+                          you are reading this log already. Enjoy!
                       </p>
                   </div>
                   <div class="span2"></div>
@@ -389,7 +394,7 @@
                           Somehow both parts can be very interesting for us, even if IR is of course not that direct connected to NLP as IE.
                           <br/>
                           <br/>
-                          As a last point we draw our first CANVAS model with <a href="https://leanstack.com/lean-canvas/">leanstack.com</a>.
+                          As a last point we draw our first CANVAS model with <a target="_blank" href="https://leanstack.com/lean-canvas/">leanstack.com</a>.
                           Another interesting experience. Of course all the stuff we wrote was already in our mind, but necessarily we have to write it down.
                           Thereby the whole imagination of ourselves changes of course and this is the point where it gets interesting.
                           To save some time and to bring in as much ideas as possible, everyone of us draw at first his own CANVAS model for Haxoft.
@@ -438,7 +443,7 @@
                           The perfect point for us is thereby that we then have still our code at our own server and have a big possibilty to provide also an addon for other platforms
                           or rather our own website. Thus the reusability of our code is very high within an addon for Atlassian.
                           As another point of our agenda from our meeting, we created a SWOT-Analysis for Haxoft with the free version of the SWOT-Analysis Tool at
-                          <a href="https://www.cayenneapps.com/swot-analysis">cayenneapps.com</a>. That gave us by doing it, an interesting insight to our own company.
+                          <a target="_blank" href="https://www.cayenneapps.com/swot-analysis">cayenneapps.com</a>. That gave us by doing it, an interesting insight to our own company.
                           Because we had to think about the current situation we are in and have to look from the outside on our company - at least as impartial as possible.
                           <br/>
                           <br/>
@@ -458,7 +463,7 @@
                       <p>
                           Even if there was again no meeting with Prof. Gaedke this week, we started to go on with our great idea of the HXT.
                           Therefore we built our electronic prototype of HXT out of our paper prototype, which you can
-                          <a href="HaxoftExtractionTool.pdf">check out</a> at your own at our website.
+                          <a target="_blank" href="HaxoftExtractionTool.pdf">check out</a> at your own at our website.
                           Furthermore we interviewed a Professor of our University at Wednesday.
                           At first he was not really proud of our idea and suggested that nobody will need something like plan.
                           So were really disappointed. Is there maybe noone who would buy our stuff?
@@ -485,7 +490,7 @@
                           <br/>
                           <br/>
                           Last but not least, we sat together and built our first short business plan.
-                          It is based on the 10/10/10 business plan idea from Alex Glassey at <a href="http://alexglassey.com/2016/12/business-planning-season-ugh/">AlexGlassey.com</a>.
+                          It is based on the 10/10/10 business plan idea from Alex Glassey at <a target="_blank" href="http://alexglassey.com/2016/12/business-planning-season-ugh/">AlexGlassey.com</a>.
                           This process showed us, that there are still many questions opened related to our business model, but we also experienced again a high team connectivity within the process.
                           There were several discussions about formulating it corretly for everyone of us, but finally we developed our first bullet listed business plan.
                       </p>
