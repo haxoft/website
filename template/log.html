@@ -458,45 +458,66 @@
                   <div class="span2"></div>
                   <div class="span8 info-block" align=justify>
                       <p>
-                          This week started with a really long meeting with Professor Gaedke. Somehow we had to talk a lot.
-                          Moreover we presented him the electronic prototype, our short first business plan and gave him a once-over of our research about the calls for proposals.
-                          In the group we were on the way to build a desktop application. Hence our prototype is built that way.
-                          But of course our study course Web Engineering should maybe not bring some non web applications as results.
-                          The Professor also claimed that we should have a web application. In our mind there was no direct need in our purpose for a web application, so we
-                          did not even thought much about it.
-                          Anyways, Prof. Gaedke pointed out that most of the times the users want to share such requirements - and hey, why not sharing it easily direct via our app?
-                          We had already our import/export feature in mind, but the direct sharing within HXT was not included. Well now it will be.
-                          Thereby we will start to implement HXT as an web application. And even if the prototype seems not to be an web application due to the lack of browser feeling,
-                          we still want to keep it. Because the core points are still as relevant as before and we still think such a GUI will satisfy our users.
-                          Moreover Prof. Gaedke brought us to the point of including our web application directly in another web application.
-                          So for example, he said, we could develop our app on top of Atlassian or maybe on top of Wordpress or even on top of Google.
-                          With such an ontop realization, we can exclude some basic stuff as real user management or basic web security issues.
-                          Moreover we can directly access the users from the given platform by providing them a plugin or an addon for one of their familiar interfaces.
-                          Futhermore we can then hopefully answer with 'Yes!', if someone will ask us 'Does it scale?'.
-                          This question was also ask by the Professor in our meeting. At first we could not directly answer the question, but now we see why this question is such important.
-                          So a direct accessible potential user group which is already filled with many people, is a very good argument to answer the scale question with yes.
-                          At least one argument. Of course we want to provide more than one argument in the end of the semester.
-                          For now we can say, that we have a big potential user group within universities at the start point, but also thought about guys who want to work with any institute
-                          of the government. Moreover also guys developing international or also national standards can be a potential user group for HXT.
-                          So we already have not only first adopters and a user group behind them, but also more new potential user groups.
+                          This weeks customer meeting was quite extensive! The consultation with Prof. Gaedke lasted about an hour.
+                          Apparently, there were many things we had to discuss. We presented him the first version of our clickable
+                          prototype, the first version of our business plan and the results of our research regarding
+                          calls for proposals.
+                          <br/>
+                          We shared with him our idea of building a desktop application and showed him our clickable prototype.
+                          He did not like very much the idea of building a "thick" desktop
+                          client. We were told that students of a Web Engineering program should be building web applications, not
+                          desktop apps. We have been obviously discussing inside the team, the different types of applications we could
+                          build, but none of us saw enough arguments for building a web app. The professor, however, seemed to have many
+                          arguments about why we should build a web application instead. We must say most of them were quite convincing. Among
+                          some of the arguments he shared with us was that distributing a desktop app is more difficult than simply
+                          creating an account in a web app, or adding a plugin to an existing platform like "Wordpress" or "Atlassian".
+                          Another argument was the functionality of shared projects. It is much easier to share projects in a web app than
+                          a desktop client.
                           <br/>
                           <br/>
-                          To go on with our work over the week, we first needed to make some short research about common platforms we could use.
-                          After that we met and talked about our ideas to come to a decision on what platform we want to start our development.
-                          The result of this discussion was Atlassian, because their we can provide an addon, which is based on our own webserver.
-                          So we register our addon at the cloud of Atlassian and if someone wants to use it, Atlassian will call our webserver, which then will provide
-                          HTMLs to the user within his Atlassian application. Moreover Atlassian provides developers of addons also a nice kit of styling sources, such that the
-                          application will not inherit the user interface of Atlassian, but ensure an overarching look and feel for the user.
-                          The perfect point for us is thereby that we then have still our code at our own server and have a big possibilty to provide also an addon for other platforms
-                          or rather our own website. Thus the reusability of our code is very high within an addon for Atlassian.
-                          As another point of our agenda from our meeting, we created a SWOT-Analysis for Haxoft with the free version of the SWOT-Analysis Tool at
-                          <a target="_blank" href="https://www.cayenneapps.com/swot-analysis">cayenneapps.com</a>. That gave us by doing it, an interesting insight to our own company.
-                          Because we had to think about the current situation we are in and have to look from the outside on our company - at least as impartial as possible.
+                          One very good point the Prof. made, was his suggestion about creating an application as a part of an already existing,
+                          well-established ecosystem. A plugin or extension that could leverage the success of a third party product, by using
+                          its existing plugin distribution system such as the Atlassian marketplace, Microsoft Windows Store app, Google play or
+                          similar application distribution centers. This was a very good idea which we readily adopted.
+                          <br/>
+                          We left from this meeting convinced that it would really be a better choice to build a web application. We will
+                          have to slightly change the prototype design, but not entirely. The structure will remain the same, but some
+                          components will have to be replaced in order to achieve a better "web" feeling.
                           <br/>
                           <br/>
-                          Further we developed a first version of the user interface at atlassian until the end of the week.
-                          Thereby we started to use django as the framework for our server and postgres for our database.
-                          Finally we also did two more interviews with guys from the VSR and started to read a bit about the whole topic of NLP, which is bigger than expected.
+                          Somewhere in the middle of the meeting, the Prof. asked us, if our business "scale". We did not know what he meant, nor
+                          what to answer. We understood the importance of the question after he explained what he exactly meant. Put simply, a business
+                          scales, if it can growth revenue with minimal or no increase in operating costs. This question was tightly bound to his
+                          suggestion about exploiting an existing ecosystem. We could increase our growth without increasing the costs required for marketing.
+                          Having learned something new and interesting, we continued with the interview.
+                          <br/>
+                          <br/>
+                          To summarize our progress over the week, we can state that we conducted some research and held a couple of brainstorming
+                          sessions about the possible platforms we could use to build our application. After that, we concluded that
+                          <a target="_blank" href="https://de.atlassian.com/">Atlassian</a> is the best option. We chose this platform for its
+                          prevalence among research groups as well as its appealing plugin architecture. The architecture is surprisingly
+                          flexible. The plugin (add-on in the Atlassian terminology) is a common web application that serves HTML
+                          content over the internet to the Atlassian product. The served content is then inserted in an Atlassian "IFrame" and
+                          served to the user as if it was content from Atlassian. This provides a seamless integration of the add-on and the
+                          Atlassian product, and at the same time provides an extreme level of flexibility.
+                          <br/>
+                          Another advantage of building the add-on as a web application is that we could very easily extend the system
+                          in order to publish a standalone version of it. The UI might remain unchanged, as well as the backend. The only
+                          modification we would have to make would be regarding the authentication of users. We would have to provide our own
+                          user management since the add-on uses delegated auth provided by Atlassian. This, however, is not at all difficult nor costly.
+                          <br/>
+                          <br/>
+                          During the meeting, we also showed the Prof. a SWOT Analysis we created with the help of a tool available at
+                          <a target="_blank" href="https://www.cayenneapps.com/swot-analysis">cayenneapps.com</a>. While doing the analysis,
+                          we gained an interesting insight into our emerging company. The analysis forced us to think about our current
+                          situation from an external point of view.
+                          <br/>
+                          <br/>
+                          After the meeting, we managed to develop the first version of the user interface. We also created
+                          the skeleton of our Django server and configured a Postgres database. We also managed to do
+                          two more interviews with the
+                          <a target="_blank" href="https://vsr.informatik.tu-chemnitz.de/about/people/">VSRians</a>
+                          and started with our research about NLP. This topic seems to be more extensive than we initially thought.
                       </p>
                   </div>
                   <div class="span2"></div>
@@ -523,7 +544,8 @@
                           <br/>
                           <br/>
                           To get even more results from potential customers we created a google form as a replacement of the direct interviews.
-                          Such a form can be spread via social media to all potential customers and make it possible for them to give us more information without further time management of our side.
+                          Such a form can be spread via social media to all potential customers and make it possible for them to give us more information
+                          without further time management of our side.
                           Hence we can get in touch with even more potential customers and their ideas and problems in the dimension of writing proposals.
                           Therefore we discussed this week a bit, how we should spread our form in detail.
                           Our first assumption is now that we will spread it via LinkedIn and E-Mail.
@@ -537,9 +559,12 @@
                           <br/>
                           <br/>
                           Last but not least, we sat together and built our first short business plan.
-                          It is based on the 10/10/10 business plan idea from Alex Glassey at <a target="_blank" href="http://alexglassey.com/2016/12/business-planning-season-ugh/">AlexGlassey.com</a>.
-                          This process showed us, that there are still many questions opened related to our business model, but we also experienced again a high team connectivity within the process.
-                          There were several discussions about formulating it corretly for everyone of us, but finally we developed our first bullet listed business plan.
+                          It is based on the 10/10/10 business plan idea from Alex Glassey at
+                          <a target="_blank" href="http://alexglassey.com/2016/12/business-planning-season-ugh/">AlexGlassey.com</a>.
+                          This process showed us, that there are still many questions opened related to our business model, but we also
+                          experienced again a high team connectivity within the process.
+                          There were several discussions about formulating it corretly for everyone of us, but finally we developed our
+                          first bullet listed business plan.
                       </p>
                   </div>
                   <div class="span2"></div>
